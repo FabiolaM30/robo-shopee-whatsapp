@@ -22,4 +22,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Executar robô
+        env:
+          SHOPEE_APP_ID: ${{ secrets.SHOPEE_APP_ID }}
+          SHOPEE_APP_SECRET: ${{ secrets.SHOPEE_APP_SECRET }}
         run: python main.py
